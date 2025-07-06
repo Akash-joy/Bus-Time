@@ -1,0 +1,23 @@
+<div class="page">
+  <app-set-preference (preferenceChanged)="handlePreference($event)"></app-set-preference>
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<p-popover #timeDetails header="Bus Schedule" [dismissable]="true">
+  <ng-template pTemplate="content">
+    <ng-container>
+      @for (bus of filteredBuses; track bus.busName) {
+      <div>
+        <strong>{{ bus.busName }}</strong> - {{ bus.arrival }} <br />
+        <hr />
+      </div>
+      } @empty {
+        No buses available for selected preference.
+      }
+    </ng-container>
+  </ng-template>
+</p-popover>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MainMap } from "./components/main-map/main-map";
+import { SetPreference } from "./components/set-preference/set-preference";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MainMap],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

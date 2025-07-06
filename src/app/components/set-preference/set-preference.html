@@ -1,0 +1,34 @@
+<div class="grid m-3">
+  <div class="col-5">
+    <p-togglebutton
+      class="w-full"
+      [(ngModel)]="fromBusStop"
+      (ngModelChange)="onFromBusStopChange()"
+      onLabel="Thrissur"
+      offLabel="Vellanikodu" />
+  </div>
+
+  <div class="col-2">
+    <div class="text-center mt-2 border-round-sm font-bold">
+      <i class="pi pi-arrow-right"></i>
+    </div>
+  </div>
+
+  <div class="col-5">
+    <p-togglebutton
+      class="w-full"
+      [(ngModel)]="toBusStop"
+      (ngModelChange)="onToBusStopChange()"
+      onLabel="Vellanikodu"
+      offLabel="Thrissur" />
+  </div>
+
+  <div class="col-12">
+    <p-togglebutton
+      class="w-full"
+      [(ngModel)]="timePeriods"
+      (ngModelChange)="emitPreference()"
+      onLabel="Morning"
+      offLabel="Afternoon" />
+  </div>
+</div>
