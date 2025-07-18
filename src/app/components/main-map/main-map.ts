@@ -11,6 +11,7 @@ import { Popover } from 'primeng/popover';
   imports: [SetPreference, primeNgImports],
   templateUrl: './main-map.html',
   styleUrl: './main-map.scss',
+  providers: [Route]
 })
 export class MainMap {
   @ViewChild('timeDetails') timeDetails!: Popover;
